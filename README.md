@@ -31,12 +31,15 @@ Na aula confirmada, aluno e instrutor podem conversar pelo chat e consultar a ro
 
 Use a senha `Dryve2026` nas três contas. Para testar o agendamento, entre como aluna e instrutora em dois perfis do navegador. A aluna solicita a aula e a instrutora aceita. O cupom `DRYVE10` aplica 10% de desconto. O pagamento da demonstração é simulado.
 
-## Para a avaliação individual
+## Estrutura do projeto
 
-- **Qual banco foi usado?** O `dryve` é um banco relacional. O projeto funciona com MySQL e com o MariaDB do XAMPP. O PHP se conecta ao banco com `mysqli` e o [database.sql](database.sql) contém a estrutura e os dados de demonstração.
-- **Quais tabelas você lembra?** `usuarios` guarda as contas, `instrutores` guarda os dados dos instrutores e `horarios` guarda os horários oferecidos. Cada registro em `agendamentos` liga um aluno a um horário. Quando o instrutor aceita a solicitação, o sistema registra a aula em `s4_aulas`. Outras tabelas são `avaliacoes`, com a nota e o comentário da aula, e `progresso`, com os módulos que cada aluno concluiu.
-- **Foi usado POO?** O código do projeto é principalmente procedural, organizado em arquivos e funções. Por exemplo, a função `consulta()` em [app.php](Dryve_Integrado/app.php) prepara e executa as consultas ao banco. A conexão usa um objeto da extensão `mysqli`.
-- **Quanto de IA foi usado?** Houve apoio de IA na implementação e revisão de partes do código, nos ajustes de acessibilidade, nos testes e na documentação. Para responder, vale dar um exemplo da sua parte e contar o que você conferiu no código ou no sistema.
+O código fica em `Dryve_Integrado`, com uma pasta por sprint. O PHP segue principalmente o estilo procedural, com funções para as tarefas que se repetem. A função `consulta()` prepara e executa as consultas ao banco com `mysqli`. [Ver app.php](Dryve_Integrado/app.php)
+
+O `dryve` é um banco relacional que funciona com MySQL ou com o MariaDB do XAMPP. A exportação tem a estrutura das tabelas e os dados de demonstração. [Ver database.sql](database.sql)
+
+As contas ficam em `usuarios`, os dados dos instrutores em `instrutores` e os horários oferecidos em `horarios`. Cada solicitação em `agendamentos` liga um aluno a um horário. Quando o instrutor aceita, a aula é registrada em `s4_aulas`. A nota e o comentário ficam em `avaliacoes`, e `progresso` guarda os módulos que cada aluno concluiu.
+
+Durante o desenvolvimento, tivemos apoio de IA em partes da implementação, na revisão do código, nos ajustes de acessibilidade, nos testes e na documentação.
 
 ## Telas e documentação
 
@@ -44,8 +47,6 @@ Use a senha `Dryve2026` nas três contas. Para testar o agendamento, entre como 
 - [Diagrama de casos de uso](Dryve_Integrado/docs/casos-de-uso.drawio) com os papéis de aluno, instrutor e administrador.
 - [Validação do projeto](Dryve_Integrado/docs/validacao.md) com os cenários das seis sprints.
 - [Configuração de mapa, e-mail e pagamento de teste](Dryve_Integrado/README.md#configuração-de-e-mail-mapa-e-pagamento).
-
-O código fica em `Dryve_Integrado`, separado por sprint. O `database.sql` da raiz é a exportação usada para instalar o projeto.
 
 ## Grupo 6
 
