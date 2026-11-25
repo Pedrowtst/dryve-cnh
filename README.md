@@ -39,7 +39,7 @@ O `dryve` é um banco relacional que funciona com MySQL ou com o MariaDB do XAMP
 
 As contas ficam em `usuarios`, os dados dos instrutores em `instrutores` e os horários oferecidos em `horarios`. Cada solicitação em `agendamentos` liga um aluno a um horário. Quando o instrutor aceita, a aula é registrada em `s4_aulas`. A nota e o comentário ficam em `avaliacoes`, e `progresso` guarda os módulos que cada aluno concluiu.
 
-Durante o desenvolvimento, tivemos apoio de IA em partes da implementação, na revisão do código, nos ajustes de acessibilidade, nos testes e na documentação.
+Tivemos apoio de IA durante a implementação do projeto.
 
 ## Telas e documentação
 
