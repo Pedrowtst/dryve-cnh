@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" pages="3">
+  <diagram id="perfil-1" name="Aluno">
+    <mxGraphModel grid="1" gridSize="10" guides="1" page="1" pageWidth="900" pageHeight="788" arrows="1" fold="1" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="limite" value="Dryve" style="rounded=0;whiteSpace=wrap;fillColor=#F4FAF6;strokeColor=#47745E;fontColor=#183728;fontStyle=1;fontSize=19;align=left;verticalAlign=top;spacingTop=14;spacingLeft=17;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="555" height="688" as="geometry" />
+        </mxCell>
+        <mxCell id="ator" value="Aluno" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;strokeWidth=2;strokeColor=#233B31;fontColor=#233B31;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="107" y="349" width="42" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="UC01" value="UC01 · Criar conta e entrar" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="102" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC01" edge="1" parent="1" source="ator" target="UC01" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC02" value="UC02 · Recuperar senha" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="161" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC02" edge="1" parent="1" source="ator" target="UC02" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC03" value="UC03 · Buscar e favoritar instrutor" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="220" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC03" edge="1" parent="1" source="ator" target="UC03" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC05" value="UC05 · Solicitar aula e pagar" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="279" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC05" edge="1" parent="1" source="ator" target="UC05" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC06" value="UC06 · Responder e alterar agendamento" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="338" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC06" edge="1" parent="1" source="ator" target="UC06" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC07" value="UC07 · Ver mapa, rota, chat e avisos" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="397" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC07" edge="1" parent="1" source="ator" target="UC07" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC09" value="UC09 · Assistir, estudar e baixar PDFs" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="456" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC09" edge="1" parent="1" source="ator" target="UC09" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC10" value="UC10 · Fazer simulado e participar do fórum" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="515" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC10" edge="1" parent="1" source="ator" target="UC10" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC11" value="UC11 · Avaliar instrutor" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="574" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC11" edge="1" parent="1" source="ator" target="UC11" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC13" value="UC13 · Consultar progresso e emitir comprovante" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="633" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC13" edge="1" parent="1" source="ator" target="UC13" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="perfil-2" name="Instrutor">
+    <mxGraphModel grid="1" gridSize="10" guides="1" page="1" pageWidth="900" pageHeight="729" arrows="1" fold="1" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="limite" value="Dryve" style="rounded=0;whiteSpace=wrap;fillColor=#F4FAF6;strokeColor=#47745E;fontColor=#183728;fontStyle=1;fontSize=19;align=left;verticalAlign=top;spacingTop=14;spacingLeft=17;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="555" height="629" as="geometry" />
+        </mxCell>
+        <mxCell id="ator" value="Instrutor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;strokeWidth=2;strokeColor=#233B31;fontColor=#233B31;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="107" y="319" width="42" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="UC01" value="UC01 · Criar conta e entrar" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="102" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC01" edge="1" parent="1" source="ator" target="UC01" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC02" value="UC02 · Recuperar senha" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="161" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC02" edge="1" parent="1" source="ator" target="UC02" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC04" value="UC04 · Publicar horários e locais" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="220" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC04" edge="1" parent="1" source="ator" target="UC04" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC06" value="UC06 · Responder e alterar agendamento" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="279" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC06" edge="1" parent="1" source="ator" target="UC06" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC07" value="UC07 · Ver mapa, rota, chat e avisos" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="338" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC07" edge="1" parent="1" source="ator" target="UC07" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC08" value="UC08 · Compartilhar GPS e concluir aula" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="397" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC08" edge="1" parent="1" source="ator" target="UC08" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC09" value="UC09 · Assistir, estudar e baixar PDFs" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="456" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC09" edge="1" parent="1" source="ator" target="UC09" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC10" value="UC10 · Fazer simulado e participar do fórum" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="515" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC10" edge="1" parent="1" source="ator" target="UC10" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC12" value="UC12 · Registrar desempenho" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="574" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC12" edge="1" parent="1" source="ator" target="UC12" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="perfil-3" name="Administrador">
+    <mxGraphModel grid="1" gridSize="10" guides="1" page="1" pageWidth="900" pageHeight="440" arrows="1" fold="1" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="limite" value="Dryve" style="rounded=0;whiteSpace=wrap;fillColor=#F4FAF6;strokeColor=#47745E;fontColor=#183728;fontStyle=1;fontSize=19;align=left;verticalAlign=top;spacingTop=14;spacingLeft=17;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="555" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ator" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;outlineConnect=0;strokeWidth=2;strokeColor=#233B31;fontColor=#233B31;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="107" y="175" width="42" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="UC01" value="UC01 · Entrar com conta de administrador" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="102" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC01" edge="1" parent="1" source="ator" target="UC01" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC02" value="UC02 · Recuperar senha" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="161" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC02" edge="1" parent="1" source="ator" target="UC02" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC14" value="UC14 · Consultar usuários" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="220" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC14" edge="1" parent="1" source="ator" target="UC14" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC15" value="UC15 · Publicar transmissão e gravação" style="ellipse;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#47745E;fontColor=#203E31;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="381" y="279" width="377" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-UC15" edge="1" parent="1" source="ator" target="UC15" style="endArrow=none;strokeColor=#617B6C;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

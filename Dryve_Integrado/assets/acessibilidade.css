@@ -1,0 +1,238 @@
+.accessibility-widget {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2000;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.accessibility-trigger {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-width: 44px;
+    min-height: 44px;
+    padding: .4rem .65rem;
+    color: white;
+    background: #115d3e;
+    border: 2px solid white;
+    border-radius: 999px;
+    font: 700 .875rem/1.3 'DM Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.accessibility-trigger span:first-child {
+    display: grid;
+    place-items: center;
+    min-width: 1.45em;
+    min-height: 1.45em;
+    padding: .12em;
+    border-radius: 50%;
+    background: white;
+    color: #115d3e;
+}
+
+.accessibility-panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    box-sizing: border-box;
+    width: min(22rem, calc(100vw - 32px));
+    max-height: 68vh;
+    max-height: 68dvh;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    padding: .75rem;
+    border: 1px solid #81998a;
+    border-radius: 12px;
+    color: #20332a;
+    background: white;
+    box-shadow: 0 8px 24px #0003;
+    text-align: left;
+}
+
+.accessibility-panel[hidden] { display: none; }
+
+.accessibility-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .35rem;
+}
+
+.accessibility-heading-row h2 { margin: 0; font-size: 1.1rem; }
+.accessibility-label { margin: .65rem 0 .3rem; font-weight: 700; }
+.accessibility-controls { display: flex; align-items: center; justify-content: space-between; gap: .25rem; }
+
+.accessibility-panel button {
+    min-height: 44px;
+    padding: .3em .5em;
+    border: 1px solid #81998a;
+    border-radius: 7px;
+    background: #f1f6f3;
+    color: #164733;
+    font: 700 .875rem/1.35 'DM Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.accessibility-panel :is(.accessibility-close, .accessibility-controls button) { min-width: 44px; }
+.accessibility-panel .accessibility-close { flex: 0 0 auto; font-size: 1.25rem; }
+.accessibility-panel button:disabled { color: #4f6258; border-style: dashed; cursor: default; }
+.accessibility-panel .accessibility-option,
+.accessibility-panel .accessibility-reset { width: 100%; margin-top: .4rem; }
+.accessibility-panel .accessibility-option { display: flex; justify-content: space-between; gap: .25rem; text-align: left; }
+.accessibility-panel .accessibility-option[aria-pressed="true"] { background: #17684a; color: white; border-color: #17684a; }
+.accessibility-size { font-weight: 700; }
+
+.accessibility-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+main { overflow-wrap: anywhere; }
+
+:is(.skip-link, .dryve-skip):not(:focus) {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid #ad6300;
+    outline-offset: 2px;
+}
+
+html.extra-spacing :where(p, li, label, td, th, a, button, input, select, textarea, summary) {
+    line-height: 1.8 !important;
+}
+
+html.highlight-links a[href] {
+    text-decoration: underline !important;
+    text-decoration-thickness: .12em !important;
+    text-underline-offset: .18em;
+}
+
+html.high-contrast {
+    color-scheme: dark;
+    --contraste-fundo: #0a0a0a;
+    --contraste-caixa: #181818;
+    --contraste-texto: #fff;
+    --contraste-destaque: #ffdf56;
+    --contraste-borda: #c8c8c8;
+}
+
+html.high-contrast,
+html.high-contrast body,
+html.high-contrast body.dryve-home {
+    color: var(--contraste-texto);
+    background: var(--contraste-fundo);
+}
+
+html.high-contrast body :is(
+    .dryve-site-nav, .dryve-site-footer, .dryve-home-hero, .dryve-home-card,
+    .form-intro, .form-card, .dashboard-card, .dashboard-welcome, .page-heading, .table-wrap,
+    .bloco, .hero, .surface, .class-bar, .chat-messages, .chat-bubble, .notice, .tracking-summary,
+    .accessibility-panel, .alert, .location-badge, .status-badge, .indicador, .detail-symbol,
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip, .leaflet-control-attribution, th, td
+) {
+    color: var(--contraste-texto);
+    background: var(--contraste-caixa);
+    border-color: var(--contraste-borda);
+    box-shadow: none;
+}
+
+html.high-contrast body :is(.dryve-home-card, .form-card, .bloco, .hero, .surface, .class-bar, .alert) {
+    border: 1px solid var(--contraste-borda);
+}
+
+html.high-contrast body :is(
+    h1, h2, h3, h4, p, label, legend, small, time, .detail-label, .select-label,
+    .eyebrow, .overline, .online-dot, .dryve-home-logged, .chat-bubble strong
+) {
+    color: var(--contraste-texto);
+}
+
+html.high-contrast body .dryve-home-hero::before { display: none; }
+
+html.high-contrast body a[href],
+html.high-contrast body .dryve-home-go {
+    color: var(--contraste-destaque);
+}
+
+html.high-contrast body :is(.dryve-home-card[href], .dryve-home-card p) { color: var(--contraste-texto); }
+html.high-contrast body main a[href]:not(.dryve-home-card) { text-decoration: underline; }
+
+html.high-contrast body :is(
+    button, .button, .botao, .dryve-section-links a, .leaflet-bar a, .skip-link, .dryve-skip,
+    .dryve-home-actions a, .dryve-site-nav .dryve-site-link
+) {
+    color: var(--contraste-destaque);
+    background: var(--contraste-fundo);
+    border-color: var(--contraste-destaque);
+    box-shadow: none;
+    transition: none;
+}
+
+html.high-contrast body :is(
+    .accessibility-trigger, .accessibility-option[aria-pressed="true"],
+    .button.full, .botao:not(.secundario), .btn-primary, .dryve-home-cta,
+    .dryve-site-nav .dryve-account-link, .dryve-site-nav .dryve-site-link[aria-current="page"],
+    .dryve-site-nav .dryve-site-link:hover
+) {
+    color: var(--contraste-fundo);
+    background: var(--contraste-destaque);
+    border-color: var(--contraste-destaque);
+}
+
+html.high-contrast body .accessibility-trigger span:first-child {
+    color: var(--contraste-destaque);
+    background: var(--contraste-fundo);
+}
+
+html.high-contrast body :is(button:disabled, .leaflet-bar .leaflet-disabled) {
+    color: var(--contraste-borda);
+    background: var(--contraste-caixa);
+    border-color: var(--contraste-borda);
+    border-style: dashed;
+    opacity: 1;
+}
+
+html.high-contrast body :is(input, select, textarea, option) {
+    color: var(--contraste-texto);
+    background: var(--contraste-fundo);
+    border-color: var(--contraste-borda);
+    accent-color: var(--contraste-destaque);
+}
+
+html.high-contrast body :is(input, textarea)::placeholder { color: var(--contraste-borda); opacity: 1; }
+html.high-contrast body progress { accent-color: var(--contraste-destaque); }
+html.high-contrast body :is(fieldset, hr, .linha, .respostas) { border-color: var(--contraste-borda); }
+html.high-contrast :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline-color: var(--contraste-destaque);
+}
+
+@media (max-width: 620px) {
+    .accessibility-widget { position: absolute; top: 12px; bottom: auto; }
+    .accessibility-panel { top: calc(100% + 8px); bottom: auto; }
+    .accessibility-trigger { justify-content: center; padding: 4px; }
+    .accessibility-trigger span:nth-child(2) { display: none; }
+}
+
+@media print {
+    html.high-contrast,
+    html.high-contrast body,
+    html.high-contrast body .modulo .bloco {
+        color: #111;
+        background: white;
+        border-color: #999;
+    }
+
+    html.high-contrast body .modulo :is(h1, p, strong) { color: #111; }
+}

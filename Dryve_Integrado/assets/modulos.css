@@ -1,0 +1,33 @@
+.modulo { max-width: 960px; margin: 2rem auto 3rem; }
+.modulo h1 { font-size: clamp(1.8rem, calc(4vw * var(--escala-texto, 1)), 2.5rem); line-height: 1.2; margin: 0 0 .5rem; }
+.modulo h2 { margin: 0 0 .7rem; font-size: 1.25rem; }
+.modulo h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+.modulo .bloco { background: var(--surface, #fff); border: 1px solid #c8dfd0; border-radius: 14px; padding: clamp(12px, 5vw, 1.15rem); margin: 1rem 0; }
+.modulo ul, .modulo ol { padding-left: 1.25rem; }
+.modulo .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr)); gap: 1rem; }
+.modulo .grade > .bloco { margin: 0; }
+.modulo .campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: .75rem; }
+.modulo .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin: 1rem 0 0; }
+.modulo .acoes form { margin: 0; }
+.modulo label { display: block; font-weight: 600; }
+.modulo input, .modulo select, .modulo textarea { width: 100%; padding: .55rem; border: 1px solid #769a86; border-radius: 7px; font: inherit; color: inherit; background: transparent; }
+.modulo fieldset { padding: .7rem; border: 1px solid #c8dfd0; border-radius: 7px; min-width: 0; }
+.modulo textarea { display: block; min-height: 5rem; }
+.modulo details { margin-top: .8rem; }
+.modulo summary { cursor: pointer; font-weight: 600; }
+.modulo .botao { display: inline-block; border: 1px solid #17684a; border-radius: 8px; padding: .5rem .85rem; font: inherit; font-weight: 650; background: #17684a; color: white; cursor: pointer; text-decoration: none; }
+.modulo .botao.secundario { background: transparent; color: inherit; }
+.modulo .indicador { display: inline-block; padding: .2rem .55rem; background: #e0f3e7; color: #164933; border-radius: 6px; font-weight: 650; }
+.modulo progress { width: 100%; accent-color: #17684a; height: 1.3rem; }
+.modulo .linha { border-top: 1px solid #c8dfd0; padding: .8rem 0; }
+.modulo .linha p, .modulo .bloco p { margin: .35rem 0; overflow-wrap: anywhere; }
+.modulo .respostas { padding-left: 1rem; border-left: 2px solid #c8dfd0; }
+.modulo .questao label { font-weight: 400; padding: .25rem 0; }
+.modulo .questao input { display: inline; width: auto; margin-right: .4rem; }
+.modulo [aria-invalid="true"] { border-color: #a71717; }
+.modulo .atalhos { margin: .8rem 0 1.2rem; }
+@media print {
+    .dryve-site-nav, .dryve-site-footer, .accessibility-widget, .nao-imprimir, .skip-link { display: none !important; }
+    .modulo { margin: 0; }
+    .modulo .bloco { break-inside: avoid; }
+}

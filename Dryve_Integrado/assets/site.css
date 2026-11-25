@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { --dryve-green: #168653; --dryve-green-dark: #106b42; --dryve-text: #202923; --dryve-muted: #718078; --dryve-line: #e3eae5; --dryve-pale: #e9f7ef; }
+
+/* Site-wide menu uses its own class names, avoiding collision with module-specific CSS. */
+body .dryve-site-nav { position: relative; z-index: 700; box-sizing: border-box; width: 100%; min-height: 76px; margin: 0; padding: 0; border: 0; border-bottom: 1px solid #e1e9e4; border-radius: 0; color: #263b2d; background: #fff; background-image: none; box-shadow: 0 2px 15px #102f1c08; font-family: 'DM Sans', Arial, sans-serif; }
+body .dryve-site-nav * { box-sizing: border-box; }
+body .dryve-site-nav .dryve-site-nav-inner { max-width: 1450px; min-height: 76px; padding: 12px 5.5%; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 23px; }
+body .dryve-site-nav .dryve-brand { flex: none; display: inline-block; margin: 0; color: #168653; font: 800 1.8125rem/1.2 'Manrope', sans-serif; text-decoration: none; letter-spacing: -1.6px; text-transform: lowercase; }
+body .dryve-site-nav .dryve-site-links { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 0; padding: 0; background: transparent; min-height: 0; }
+body .dryve-site-nav .dryve-site-link { display: inline-flex; gap: 5px; align-items: center; min-height: 37px; padding: 9px 11px; background: transparent; border: 0; border-radius: 9px; color: #556a5c; font: 700 0.78125rem/1.35 'DM Sans', Arial, sans-serif; text-decoration: none; overflow-wrap: anywhere; transition: background .2s, color .2s; }
+body .dryve-site-nav .dryve-site-link:hover,body .dryve-site-nav .dryve-site-link[aria-current="page"] { color: var(--dryve-green-dark); background: var(--dryve-pale); }
+body .dryve-site-nav .dryve-account-link { color: white; background: var(--dryve-green); }
+body .dryve-site-nav .dryve-account-link:hover { color: white; background: var(--dryve-green-dark); }
+body .dryve-site-nav .dryve-signout { color: #ab4b49; }
+body .dryve-site-nav [hidden] { display: none !important; }
+body .dryve-site-footer { display: block; padding: 27px 18px; margin-top: 46px; border-top: 1px solid #e0e9e3; background: #fff; color: #168653; text-align: center; font: 800 1.3125rem/1.25 'Manrope', sans-serif; }
+.dryve-section-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 0 19px; }
+.dryve-section-links a { border-radius: 9px; padding: 9px 13px; background: var(--dryve-pale); color: var(--dryve-green-dark); text-decoration: none; font: 700 0.8125rem/1.3 'DM Sans', sans-serif; }
+.dryve-section-links a:hover { background: #d8efe1; }
+.dryve-section-links .mode-pill { margin-left: auto; }
+.dryve-learning-tabs { margin: -13px 0 25px; padding: 12px; border-radius: 13px; background: #fff; border: 1px solid #e3eae5; }
+.dryve-learning-tabs nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.dryve-learning-tabs button { border: 0; border-radius: 9px; padding: 12px 15px; background: transparent; color: #627b6a; font: 700 0.8125rem 'DM Sans', sans-serif; cursor: pointer; }
+.dryve-learning-tabs button.active { color: var(--dryve-green-dark); background: var(--dryve-pale); }
+.dryve-bridge-card p { color: #688474; font-size: 0.8125rem; line-height: 1.6; }
+.dryve-bridge-card a { margin-top: 13px; }
+.dryve-skip { position: absolute; top: -100px; left: 15px; padding: 10px; z-index: 2000; color: #fff; background: #125d3c; }
+.dryve-skip:focus { top: 10px; }
+
+/* Unified landing page */
+body.dryve-home { background: #f6f8f7; margin: 0; min-height: 100vh; color: #202923; font-family: 'DM Sans', sans-serif; }
+body.dryve-home * { box-sizing: border-box; }
+.dryve-home-main { width: min(1200px, 88%); margin: 34px auto 70px; }
+.dryve-home-hero { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.3fr .75fr; gap: 40px; align-items: center; min-height: 365px; border-radius: 21px; padding: 54px 58px; background: linear-gradient(110deg, #116c43, #229f6b); color: #fff; }
+.dryve-home-hero::before { content: ''; position: absolute; width: 470px; height: 470px; right: -160px; top: -150px; border-radius: 50%; border: 80px solid #ffffff12; pointer-events: none; }
+
+.dryve-home-hero h1 { max-width: 650px; margin: 0 0 18px; font: 800 clamp(1.875rem,calc(4vw * var(--escala-texto, 1)),3rem)/1.15 'Manrope', sans-serif; letter-spacing: -1.4px; }
+.dryve-home-hero p { max-width: 580px; margin: 0; color: #e1f5e9; font: 400 0.9375rem/1.75 'DM Sans', sans-serif; }
+.dryve-home-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 29px; }
+.dryve-home-actions a { min-height: 45px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 9px; text-decoration: none; font: 800 0.8125rem 'DM Sans', sans-serif; }
+.dryve-home-cta { background: #fff; color: #136d43; }
+.dryve-home-secondary { color: #fff; background: #ffffff20; border: 1px solid #ffffff65; }
+.dryve-home-logged { margin-top: 27px; color: #e2f7ea; font-size: 0.8125rem; }
+.dryve-home-logged a { color: #fff; font-weight: 800; }
+.dryve-home-hero-art { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 245px; }
+.dryve-home-art-circle { width: 180px; height: 180px; display: grid; place-items: center; border-radius: 50%; background: #ffffff18; border: 1px solid #ffffff55; box-shadow: 0 0 0 24px #ffffff0c; }
+.dryve-home-art-circle span { display: grid; place-items: center; width: 120px; height: 120px; border-radius: 35px; background: white; color: #198b55; font: 800 4.375rem 'Manrope', sans-serif; transform: rotate(-8deg); }
+
+.dryve-home-intro { margin: 45px 0 23px; }
+
+.dryve-home-intro h2 { margin: 6px 0; font: 800 1.6875rem 'Manrope',sans-serif; letter-spacing: -.7px; }
+.dryve-home-intro p { color: #53645a; font-size: 0.875rem; }
+.dryve-home-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.dryve-home-card { display: flex; flex-direction: column; min-height: 165px; padding: 26px; border: 1px solid #e2ebe6; border-radius: 15px; background: #fff; color: #26392d; text-decoration: none; box-shadow: 0 7px 18px #0e422007; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.dryve-home-card:hover { color: #26392d; transform: translateY(-4px); border-color: #b7dbcb; box-shadow: 0 12px 28px #173c2512; }
+.dryve-home-card h3 { margin: 0 0 10px; font: 800 1.125rem 'Manrope',sans-serif; }
+.dryve-home-card p { margin: 0 0 21px; color: #54675b; font-size: 0.8125rem; line-height: 1.7; }
+.dryve-home-go { margin-top: auto; color: #138350; font-size: 0.8125rem; font-weight: 800; }
+
+@media (max-width: 1000px) { body .dryve-site-nav .dryve-site-nav-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 15px 5%; } .dryve-home-hero { grid-template-columns: 1fr; } .dryve-home-hero-art { display: none; } .dryve-home-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 620px) {
+    body .dryve-site-nav .dryve-site-links { width: 100%; gap: 3px; }
+    body .dryve-site-nav .dryve-site-link { padding: 7px 8px; font-size: 0.75rem; }
+    .dryve-home-main { width: 92%; margin-top: 20px; }
+    .dryve-home-hero { padding: 31px 26px; min-height: 280px; }
+    .dryve-home-grid { grid-template-columns: 1fr; }
+
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }

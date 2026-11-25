@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="Dryve: acompanhamento da aula, mapa, comunicação e avisos." name="description"/>
+<title>Dryve | Acompanhamento da aula</title>
+<link href="../assets/leaflet/leaflet.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/><link rel="stylesheet" href="../assets/acessibilidade.css">
+<script defer src="../assets/site.js"></script><script defer src="../assets/acessibilidade.js"></script></head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+<header class="dryve-site-nav"><div class="dryve-site-nav-inner"><a aria-label="Dryve - voltar ao início" class="dryve-brand" href="../index.php">dryve</a><nav aria-label="Menu principal" class="dryve-site-links"><a class="dryve-site-link" href="../index.php">Início</a><a class="dryve-site-link" href="../sprint2/index.php">Instrutores</a><a class="dryve-site-link" href="../sprint3/index.php">Agendamentos</a><a aria-current="page" class="dryve-site-link" href="../sprint4/index.html">Acompanhamento</a><a class="dryve-site-link" href="../sprint5/index.php">Estudos</a><a class="dryve-site-link" href="../sprint6/index.php">Progresso</a><a class="dryve-site-link dryve-account-link" href="../sprint1/login.php" id="dryve-account-link">Entrar</a><a class="dryve-site-link dryve-signout" hidden="" href="../sprint1/logout.php" id="dryve-signout">Sair</a></nav></div>
+<div class="accessibility-widget" aria-label="Ferramentas de acessibilidade">
+  <button type="button" class="accessibility-trigger" id="accessibility-trigger" aria-controls="accessibility-panel" aria-expanded="false" aria-label="Abrir opções de acessibilidade">
+    <span aria-hidden="true">Aa</span>
+    <span>Acessibilidade</span>
+  </button>
+  <section class="accessibility-panel" id="accessibility-panel" aria-labelledby="accessibility-heading" hidden tabindex="-1">
+    <div class="accessibility-heading-row">
+      <h2 id="accessibility-heading">Acessibilidade</h2>
+      <button type="button" class="accessibility-close" id="accessibility-close" aria-label="Fechar opções de acessibilidade">×</button>
+    </div>
+    <p class="accessibility-label" id="accessibility-size-label">Tamanho do texto</p>
+    <div class="accessibility-controls" role="group" aria-labelledby="accessibility-size-label">
+      <button type="button" id="accessibility-decrease" aria-label="Diminuir tamanho do texto">A−</button>
+      <output id="accessibility-size" class="accessibility-size">100%</output>
+      <button type="button" id="accessibility-increase" aria-label="Aumentar tamanho do texto">A+</button>
+    </div>
+    <button type="button" class="accessibility-option" id="accessibility-contrast" aria-pressed="false">Alto contraste <span aria-hidden="true">○</span></button>
+    <button type="button" class="accessibility-option" id="accessibility-spacing" aria-pressed="false">Mais espaço entre linhas <span aria-hidden="true">○</span></button>
+    <button type="button" class="accessibility-option" id="accessibility-links" aria-pressed="false">Destacar links <span aria-hidden="true">○</span></button>
+    <button type="button" class="accessibility-reset" id="accessibility-reset">Restaurar padrão</button>
+    <p class="accessibility-status visually-hidden" id="accessibility-status" role="status" aria-live="polite"></p>
+
+  </section>
+</div>
+</header>
+<main class="container" id="conteudo" tabindex="-1">
+<div class="dryve-section-links" id="atalhos-aula" hidden><a href="#acompanhamento">Mapa</a><a href="#chat">Chat</a><a href="#notificacoes">Notificações</a></div>
+<section aria-labelledby="hero-titulo" class="hero">
+<div>
+<h1 id="hero-titulo">Acompanhe sua aula</h1>
+<p>Veja o mapa, troque mensagens e consulte os avisos da aula.</p>
+</div>
+<div aria-hidden="true" class="hero-decoration">
+<span class="hero-mark">D</span>
+</div>
+</section>
+<div aria-live="polite" class="alert info" id="app-status" role="status">Carregando suas aulas…</div>
+<p id="entrar-acompanhamento" hidden><a href="../sprint1/login.php">Entrar na minha conta</a></p>
+<p id="ir-agendamentos" hidden><a href="../sprint3/index.php">Ver agendamentos</a></p>
+<section aria-label="Aula selecionada" class="class-bar" id="selecao-aula" hidden>
+<div>
+<h2 id="aula-titulo">Aula prática</h2>
+<p id="aula-resumo"></p>
+</div>
+<div class="class-actions">
+<div class="aula-opcoes" id="aula-opcoes" hidden>
+<label class="select-label" for="aula-select">Selecionar aula</label>
+<select id="aula-select"></select>
+</div>
+<span class="status-badge" id="aula-status">Agendada</span>
+</div>
+</section>
+<div id="dados-da-aula" hidden>
+<section aria-label="Mapa e detalhes da aula" class="main-grid" id="acompanhamento">
+<article class="surface map-surface">
+<div class="surface-heading">
+<div>
+<h2>Localização e trajeto</h2>
+<p id="mapa-subtitulo">O mapa mostra o encontro e o destino. O instrutor pode compartilhar o GPS.</p>
+</div>
+<span class="location-badge" id="location-badge">Sem compartilhamento</span>
+</div>
+<div aria-label="Mapa da aula e pontos de encontro e destino" id="mapa" role="region"></div>
+<div class="map-actions">
+<button class="btn btn-secondary" id="btn-centralizar" type="button">Centralizar mapa</button>
+<button class="btn btn-secondary" id="btn-rota" type="button">Traçar rota</button>
+<a href="../sprint6/index.php#aulas" id="pos-aula" hidden>Ver histórico e pós-aula</a>
+<button class="btn btn-primary" hidden="" id="btn-localizacao" type="button">Compartilhar localização</button>
+<button class="btn btn-outline-danger" hidden="" id="btn-parar" type="button">Parar compartilhamento</button>
+</div>
+<p class="map-note" id="mapa-privacidade">A localização compartilhada fica visível aos participantes desta aula.</p>
+</article>
+<aside aria-labelledby="detalhes-titulo" class="surface details-surface">
+<div class="surface-heading"><div><h2 id="detalhes-titulo">Detalhes da aula</h2></div></div>
+<div class="detail-item"><span aria-hidden="true" class="detail-symbol">◉</span><div><span class="detail-label">Instrutor</span><strong id="detalhe-instrutor"></strong></div></div>
+<div class="detail-item"><span aria-hidden="true" class="detail-symbol">◷</span><div><span class="detail-label">Data e horário</span><strong id="detalhe-horario"></strong></div></div>
+<div class="detail-item"><span aria-hidden="true" class="detail-symbol">⌖</span><div><span class="detail-label">Ponto de encontro</span><strong id="detalhe-encontro"></strong></div></div>
+<div class="detail-item"><span aria-hidden="true" class="detail-symbol">➜</span><div><span class="detail-label">Destino</span><strong id="detalhe-destino"></strong></div></div>
+<div class="tracking-summary">
+<span class="overline">SITUAÇÃO DO INSTRUTOR</span>
+<strong id="status-instrutor">Aguardando localização</strong>
+<p id="atualizacao-local">O compartilhamento é voluntário e pode ser interrompido.</p>
+</div>
+<div class="instructor-actions" hidden="" id="instructor-actions">
+<button class="btn btn-secondary" id="btn-iniciar-aula" type="button">Iniciar aula</button>
+<button class="btn btn-secondary" id="btn-concluir-aula" type="button">Concluir aula</button>
+<p id="inicio-pendente" hidden>Aguardando o pagamento em Agendamentos.</p>
+</div>
+</aside>
+</section>
+<section aria-label="Comunicação e alertas" class="secondary-grid">
+<article class="surface chat-surface" id="chat">
+<div class="surface-heading">
+<div><h2>Chat da aula</h2><p id="chat-subtitulo">Converse com a pessoa agendada para esta aula.</p></div>
+<span aria-label="Canal de mensagens" class="online-dot">●</span>
+</div>
+<div aria-live="polite" aria-relevant="additions text" class="chat-messages" id="mensagens" role="log"></div>
+<form class="chat-form" id="chat-form">
+<label class="visually-hidden" for="mensagem">Digite sua mensagem</label>
+<input autocomplete="off" id="mensagem" maxlength="500" name="mensagem" placeholder="Digite sua mensagem..." required=""/>
+<button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+<p class="small-note" id="chat-aviso"></p>
+</article>
+<article class="surface notifications-surface" id="notificacoes">
+<div class="surface-heading">
+<h2>Notificações</h2>
+</div>
+<button class="btn btn-secondary btn-wide" id="btn-notificacoes" type="button">Ativar avisos do navegador</button>
+<div aria-live="polite" class="notice-list" id="lista-avisos"></div>
+<div class="delay-box" hidden="" id="delay-box">
+<label for="atraso-minutos">Informar atraso</label>
+<div class="delay-row">
+<select id="atraso-minutos">
+<option value="0">Sem atraso</option>
+<option value="5">5 minutos</option>
+<option value="10">10 minutos</option>
+<option value="15">15 minutos</option>
+<option value="20">20 minutos</option>
+<option value="30">30 minutos</option>
+<option value="45">45 minutos</option>
+<option value="60">60 minutos</option>
+</select>
+<button class="btn btn-primary" id="btn-atraso" type="button">Atualizar</button>
+</div>
+</div>
+</article>
+</section>
+</div>
+</main>
+<footer class="dryve-site-footer">Dryve</footer><script src="../assets/leaflet/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
